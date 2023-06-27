@@ -1,0 +1,61 @@
+[{
+        "name": "BAJFINANCE",
+        "price": "6,435.50",
+        "changePercent": "0.30%",
+        "change": "positive"
+    },
+    {
+        "name": "BHARTIARTL",
+        "price": "771.5",
+        "changePercent": "0.69%",
+        "change": "negative"
+    },
+    {
+        "name": "TCS",
+        "price": "3,100.25",
+        "changePercent": "0.85%",
+        "change": "positive"
+    },
+    {
+        "name": "HDFCBANK",
+        "price": "1,270.75",
+        "changePercent": "0.42%",
+        "change": "positive"
+    },
+    {
+        "name": "RELIANCE",
+        "price": "2,345.60",
+        "changePercent": "0.15%",
+        "change": "positive"
+    },
+    {
+        "name": "INFY",
+        "price": "1,500.10",
+        "changePercent": "0.51%",
+        "change": "negative"
+    },
+    {
+        "name": "ICICIBANK",
+        "price": "700.80",
+        "changePercent": "0.93%",
+        "change": "positive"
+    },
+    {
+        "name": "HINDUNILVR",
+        "price": "2,050.75",
+        "changePercent": "0.25%",
+        "change": "negative"
+    },
+    {
+        "name": "WIPRO",
+        "price": "450.20",
+        "changePercent": "0.78%",
+        "change": "positive"
+    },
+    {
+        "name": "ITC",
+        "price": "220.35",
+        "changePercent": "0.12%",
+        "change": "positive"
+    }
+]
