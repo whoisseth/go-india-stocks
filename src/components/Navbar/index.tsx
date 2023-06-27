@@ -10,18 +10,28 @@ type Props = {};
 
 export default function Navbar({}: Props) {
   return (
-    <div className="flex items-center justify-between px-4 py-2 border-2 h-14 border-red-50">
+    <div className="flex items-center justify-between h-16 px-4 py-2 shadow-sm">
       {/* logo */}
-      <section>
-        <Image src={logo} className="w-auto h-full" alt="logo" />
+      <section className="pr-1  md:pr-4 w-[100px]">
+        <Image src={logo} className="h-auto w-14 " alt="logo" />
       </section>
       {/* searchBar */}
-      <section>
-        <SearchBar />
-      </section>
+      <SearchBar />
       {/* userIcon */}
-      <section>
-        <Image src={userIcon} className="w-auto h-7" alt="logo" />
+      <section className="flex items-center">
+        {/* mobile */}
+        <Image src={userIcon} className="w-8 h-auto ml-6 mr-3 md:hidden" alt="logo" />
+
+        {/*laptop  */}
+        <div className="items-center hidden min-w-[310px] gap-4 md:flex md:pl-5">
+          <button> Contact Us </button>
+          <button className="px-4  py-1.5 border border-black  rounded ">
+            SIGN UP
+          </button>
+          <button className="px-4  py-1.5 border border-black  rounded">
+            SIGN In
+          </button>
+        </div>
       </section>
     </div>
   );
