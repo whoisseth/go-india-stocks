@@ -1,5 +1,12 @@
 /** @format */
 
+import Navbar from "@/components/Navbar";
+import React from "react";
+
 export default function Home() {
-  return <mian></mian>;
+  return (
+    <main>
+      <Navbar />
+    </main>
+  );
 }
