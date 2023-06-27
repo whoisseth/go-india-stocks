@@ -4,7 +4,7 @@ import React from "react";
 import logo from "@/assets/img/logo.png";
 import userIcon from "@/assets/img/user-icon.png";
 import Image from "next/image";
-import SearchBar from "../ui/SearchBar";
+import SearchBar from "@/components/SearchBar";
 
 type Props = {};
 
@@ -20,7 +20,11 @@ export default function Navbar({}: Props) {
       {/* userIcon */}
       <section className="flex items-center">
         {/* mobile */}
-        <Image src={userIcon} className="w-8 h-auto ml-6 mr-3 md:hidden" alt="logo" />
+        <Image
+          src={userIcon}
+          className="w-8 h-auto ml-6 mr-3 md:hidden"
+          alt="logo"
+        />
 
         {/*laptop  */}
         <div className="items-center hidden min-w-[310px] gap-4 md:flex md:pl-5">

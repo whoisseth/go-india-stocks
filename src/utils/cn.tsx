@@ -1,18 +1,21 @@
 /** @format */
 
-import clsx from "clsx";
+import clsx, { ClassValue, ClassDictionary } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-type ClassNameObject = { [key: string]: boolean };
+export function cn(...args: ClassValue[]) {
+  const filteredArgs = args.filter((arg) => arg !== null);
 
-export function cn(...args: (string | ClassNameObject)[]) {
-  const classNames = args.map((arg) => {
+  const classNames = filteredArgs.map((arg) => {
     if (typeof arg === "string") {
       return arg;
     }
-    return Object.entries(arg)
-      .filter(([, value]) => value)
-      .map(([key]) => key);
+    if (typeof arg === "object" && !Array.isArray(arg)) {
+      return Object.entries(arg || {})
+        .filter(([, value]) => value)
+        .map(([key]) => key);
+    }
+    return arg;
   });
 
   return twMerge(clsx(classNames));
