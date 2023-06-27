@@ -29,14 +29,7 @@ const sidebarItems = [
   }
 ,  {
     title: "Watchlist",
-  },
-  {
-    title: "Events",
-  },
-  {
-    title: "News/Interview",
   }
-
 
 ];
 

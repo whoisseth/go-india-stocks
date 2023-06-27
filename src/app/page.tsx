@@ -1,6 +1,7 @@
 /** @format */
 
 import FeaturedCompanies from "@/components/FeaturedCompanies";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import StocksPriceBanner from "@/components/StocksPriceBanner";
@@ -16,6 +17,7 @@ export default function Home() {
         <Sidebar />
         <div>Helloworld</div>
       </main>
+      <Footer/>
     </div>
   );
 }
