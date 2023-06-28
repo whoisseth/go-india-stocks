@@ -19,18 +19,17 @@ const sidebarItems = [
     icon: <AiFillDollarCircle />
   },
   {
-    title: "Sentiment",
+    title: "Sentiment"
   },
   {
-    title: "Market",
+    title: "Market"
   },
   {
-    title: "Sector",
+    title: "Sector"
+  },
+  {
+    title: "Watchlist"
   }
-,  {
-    title: "Watchlist",
-  }
-
 ];
 
 type Props = {};
@@ -45,7 +44,9 @@ export default function Sidebar({}: Props) {
     <div
       className={cn(
         " absolute md:relative  left-0 top-0 h-full  bg-blue-950 z-40 text-white transition-all duration-300 ease-in-out",
-        sideBarOpen ? "translate-x-0 w-[240px]" : "-translate-x-full w-[0px]"
+        sideBarOpen
+          ? "translate-x-0 min-w-[240px]  w-[240px]"
+          : "-translate-x-full w-[0px]"
       )}
     >
       {/* toggle sidebar button */}
@@ -56,20 +57,27 @@ export default function Sidebar({}: Props) {
         <FaAngleRight />
       </button>
 
-     <section className="flex flex-col h-full overflow-hidden">
-         {/* sidebar content  */}
-      <section className="flex items-center justify-between p-2 pr-6 my-2 border-b border-slate-200">
-        <div className="flex items-center ">
-            <div className="flex items-center justify-center w-6 h-6 mt-1 mr-2 text-lg max-w-6"><BiSolidUser/></div>
+      <section className="flex flex-col h-full overflow-hidden">
+        {/* sidebar content  */}
+        <section className="flex items-center justify-between p-2 pr-6 my-2 border-b border-slate-200">
+          <div className="flex items-center ">
+            <div className="flex items-center justify-center w-6 h-6 mt-1 mr-2 text-lg max-w-6">
+              <BiSolidUser />
+            </div>
             <div> Hello, User </div>
-        </div>
-        <BellIcon />
+          </div>
+          <BellIcon />
+        </section>
+        {/* sidebar items */}
+        {sidebarItems.map((item, index) => (
+          <SidebarItem
+            active={item.active}
+            key={index}
+            title={item.title}
+            icon={item.icon}
+          />
+        ))}
       </section>
-      {/* sidebar items */}
-      {sidebarItems.map((item, index) => (
-        <SidebarItem active={item.active} key={index} title={item.title} icon={item.icon} />
-      ))}
-     </section>
     </div>
   );
 }
@@ -92,7 +100,13 @@ interface SidebarItemsProps {
 function SidebarItem(props: SidebarItemsProps) {
   const { title, icon, active } = props;
   return (
-    <a href="#" className={cn("flex items-center p-2  hover:bg-black/30", active && "bg-black/30")}>
+    <a
+      href="#"
+      className={cn(
+        "flex items-center p-2  hover:bg-black/30",
+        active && "bg-black/30"
+      )}
+    >
       <div className="flex items-center justify-center w-6 h-6 mt-1 mr-2 text-lg max-w-6">
         {icon}
       </div>

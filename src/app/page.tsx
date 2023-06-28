@@ -1,24 +1,22 @@
 /** @format */
 
-import DisscussionFourm from "@/components/DisscussionFourm";
 import FeaturedCompanies from "@/components/FeaturedCompanies";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import StocksPriceBanner from "@/components/StocksPriceBanner";
 import React from "react";
+import MainSection from "./MainSection";
 
 export default function Home() {
   return (
-    <div className="h-screen max-h-screen overflow-clip">
+    <div className="h-screen max-h-screen pb-10 overflow-clip">
       <Navbar />
       <StocksPriceBanner />
       <FeaturedCompanies />
-      <main className="relative flex h-full border-2 border-blue-200">
+      <main className="relative flex h-full">
         <Sidebar />
-        <div className="h-full">
-          <DisscussionFourm />
-        </div>
+        <MainSection />
       </main>
       <Footer />
     </div>
