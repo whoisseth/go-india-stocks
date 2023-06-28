@@ -23,7 +23,7 @@ export default function Navbar({}: Props) {
         <Image
           src={userIcon}
           className="w-8 h-auto ml-6 mr-3 md:hidden"
-          alt="logo"
+          alt="userIcon"
         />
 
         {/*laptop  */}
